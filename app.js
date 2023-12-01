@@ -41,18 +41,36 @@
 
 
 
+
 function countWord3(){
 
 
-let text3 = document.getElementById("text3").value;
+   // let text3 = document.getElementById("text3").value;
+
+   // text3 =text3.trim();
+   // var words = text3.split(" ");
+   // var wordCount = 0;
+   
+   // document.getElementById("best43").innerHTML=wordCount; 
+
+
+
+
+   let text3 = document.getElementById("text3").value;
+
 text3 =text3.trim();
+var words = text3.split(" ");
+// var harakats = text3.split(" ");
+var wordCount = words.length;
 
-
- let words = text3.split(" ").length ;
-
+document.getElementById("best43").innerHTML=wordCount; 
 
    
-document.getElementById("best43").innerHTML=words;
+
+//  let words = text3.split(" ").length ;
+
+   
+// document.getElementById("best43").innerHTML=wordCount; 
   
 
 let Counter31 = 0 ;
@@ -86,7 +104,7 @@ let Counter326 = 0 ;
 let Counter327 = 0 ;
 let Counter328 = 0 ;
 let Counter29 = 0 ;
-let Counter7777 = 0 ;
+
 
 
 
@@ -142,32 +160,32 @@ let chida = ["ّ"];
 let sokoune = ["ْ"];
 
 
+
+
+for (const harakat of words) {
+   if (harakat.match(/[^\u0600-\u06FF]/)) {
+     continue;
+   }
+ 
+   // letterCounts.set(harakat, letterCounts.get(letter) || 0);
+   // letterCounts.set(harakat, letterCounts.get(letter) + 1);
+ }
+ 
+
+
+
 for(ch of text3) {
+
+  
    // var ch = text3.charAt(ch);
-   if (text3.match(/[^\u0600-\u06FF]/)) {
-      continue;
-    }
+   // if (text3.match(/[^\u0600-\u06FF]/)) {
+   //    continue;
+   //  }
     if (alif3.includes(ch)){
       Counter31++
   
   
-  }   if (damma.includes(ch)) {
-   Counter800++
-
-    }  if (fatha.includes(ch)) {
-      Counter801++
-
-    } if (kasra.includes(ch)) {
-      Counter802++
-
-    }  if (sokoune.includes(ch)) {
-      Counter803++
-  
-    
-  }if (chida.includes(ch)) {
-   Counter804++
-
- } if (laa3.includes(ch)){
+  }   if (laa3.includes(ch)){
     Counter32++
  }
 
@@ -290,8 +308,25 @@ if (jim3.includes(ch)){
 
 if (ttta3.includes(ch)){
    Counter328++
+}else if (damma.includes(ch)) {
+   Counter800++
+
+    } else if (fatha.includes(ch)) {
+      Counter801++
+
+    } else if (kasra.includes(ch)) {
+      Counter802++
+
+    } else if (sokoune.includes(ch)) {
+      Counter803++
+  
+    
+  }else if (chida.includes(ch)) {
+   Counter804++
+
+ }
 }
-}
+
 
 
 
