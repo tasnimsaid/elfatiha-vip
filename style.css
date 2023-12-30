@@ -49,12 +49,12 @@ border-radius: 7px;
 
 .best{
     position: relative;
-    margin : auto;
+    /* margin : auto; */
     bottom : 50px;
     padding : 3px;
     font-size : x-large ;
     text-align : center;
-    left: 45px;
+    left: 100px;
     top: 25px;
     
 }
@@ -134,7 +134,9 @@ table{
 
 .hm{
     position: absolute;
-    top: 360px;
+    top: 930px;
+    right: 350px;
+    /* justify-content: center; */
 }
 
 
